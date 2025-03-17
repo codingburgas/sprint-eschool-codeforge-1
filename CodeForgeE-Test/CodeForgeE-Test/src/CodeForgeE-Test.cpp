@@ -3,6 +3,7 @@
 #include <Windows.h>
 #include "test.h"
 #include "choiceSelector.h"
+#include "../themeQuestions.h"
 
 using namespace std;
 
@@ -51,7 +52,7 @@ int main()
             //test doing
             system("cls");
             //startTest();
-            choiceSelector();
+            startQuiz();
             //Sleep(4000);
             break;
         case 2:
