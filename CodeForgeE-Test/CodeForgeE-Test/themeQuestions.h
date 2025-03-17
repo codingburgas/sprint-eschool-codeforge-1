@@ -16,7 +16,7 @@ void startQuiz() {
     vector<Question> questions = {
         //Geography questions
         {"What is the longest river in the world?", {"Amazon River", "Mississippi River", "Nile River", "Yangtze River"}, 'c'},
-        {"Which country has the largest population?", {"India", "United States", "China", "Brazil"}, 'c'},
+        {"Which country has the largest population?", {"India", "United States", "China", "Brazil"}, 'a'},
         {"What is the capital of Canada?", {"Toronto", "Vancouver", "Ottawa", "Montreal"}, 'c'},
         {"The Great Barrier Reef is located off the coast of which country?", {"Australia", "Indonesia", "Philippines", "Fiji"}, 'a'},
         {"Which desert is the largest in the world?", {"Sahara", "Gobi", "Atacama", "Kalahari"}, 'a'},
@@ -54,13 +54,13 @@ void startQuiz() {
         {"What is 8 × 7?", {"48", "56", "64", "72"}, 'b'},
         {"What is the square root of 81?", {"7", "8", "9", "10"}, 'c'},
         {"What is 15% of 200?", {"20", "25", "30", "35"}, 'c'},
-        {"If a triangle has angles of 60° and 60°, what is the third angle?", {"30°", "60°", "90°", "120°"}, 'a'},
-        {"What is 12³?", {"1,248", "1,726", "1,728", "1,832"}, 'c'},
-        {"What is ¾ as a decimal?", {"0.25", "0.50", "0.75", "1.25"}, 'c'},
+        {"If a triangle has angles of 60 degrees and 60 degrees, what is the third angle?", {"30 degrees", "60 degrees", "90 degrees", "120 degrees"}, 'b'},
+        {"What is 12^3?", {"1,248", "1,726", "1,728", "1,832"}, 'c'},
+        {"What is 3/4 as a decimal?", {"0.25", "0.50", "0.75", "1.25"}, 'c'},
         {"Solve: 2x + 5 = 15", {"3", "5", "7", "10"}, 'b'},
         {"What is π approximately equal to?", {"2.14", "3.14", "4.14", "5.14"}, 'b'},
         {"How many degrees are in a right angle?", {"45°", "90°", "180°", "270°"}, 'b'},
-        {"What is 2⁵?", {"10", "25", "32", "50"}, 'c'},
+        {"What is 2^5?", {"10", "25", "32", "50"}, 'c'},
 
         //English questions
         {"What is a synonym for 'happy'?", {"Sad", "Joyful", "Angry", "Tired"}, 'b'},
