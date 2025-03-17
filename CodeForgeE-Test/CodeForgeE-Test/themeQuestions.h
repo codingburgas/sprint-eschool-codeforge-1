@@ -1,5 +1,7 @@
 ﻿#include <iostream>
 #include <string>
+#include <iomanip>
+#include <Windows.h>
 #include <vector>
 #include <algorithm>
 #include <ctime>
@@ -85,19 +87,20 @@ void startQuiz() {
         cout << "   c) " << questions[i].options[2] << endl;
         cout << "   d) " << questions[i].options[3] << endl;
 
-        cout << "Your answer: ";
+        cout << setw(123) << "Your answer: ";
         char userAnswer;
         cin >> userAnswer;
 
         if (tolower(userAnswer) == questions[i].correctAnswer) {
-            cout << "\033[32m" << "Correct!\n" << "\033[0m" << endl;
+            cout << setw(118) << "\033[32m" << "Correct!\n" << "\033[0m" << endl;
             score++;
         }
         else {
-            cout << "\033[1;31m" << "Incorrect! The correct answer is " << questions[i].correctAnswer << ") "
+            cout << setw(102) << "\033[1;31m" << "Incorrect! The correct answer is " << questions[i].correctAnswer << ") "
                 << questions[i].options[questions[i].correctAnswer - 'a'] << ".\n" << "\033[0m" << endl;
         }
     }
 
-    cout << "Quiz Complete! Your final score: " << score << "/20" << endl;
+    cout << setw(132) << "Quiz Complete! Your final score: " << score << "/20" << endl;
+    Sleep(10000);
 }

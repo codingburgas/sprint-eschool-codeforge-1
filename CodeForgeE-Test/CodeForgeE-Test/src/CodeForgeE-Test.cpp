@@ -10,15 +10,16 @@ using namespace std;
 void printMenu()
 {
     system("cls");
-    cout << "Choose one of the following options:" << endl;
-    cout << "1. Take a test" << endl;
-    cout << "2. Students with the highest score" << endl;
-    cout << "3. Students with the lowest score" << endl;
-    cout << "4. Average test score" << endl;
-    cout << "5. Category with the highest performance" << endl;
-    cout << "6. Category with the lowest performance" << endl;
-    cout << "7. Exit" << endl << endl;
-    cout << "Your choice (1-7):";
+    cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
+    cout << "                                                                                                        Choose one of the following options:" << endl;
+    cout << "                                                                                                        1. Take a test" << endl;
+    cout << "                                                                                                        2. Students with the highest score" << endl;
+    cout << "                                                                                                        3. Students with the lowest score" << endl;
+    cout << "                                                                                                        4. Average test score" << endl;
+    cout << "                                                                                                        5. Category with the highest performance" << endl;
+    cout << "                                                                                                        6. Category with the lowest performance" << endl;
+    cout << "                                                                                                        7. Exit" << endl << endl;
+    cout << "                                                                                                        Your choice (1-7):";
 }
 void initStudents()
 //initialization of the arrays with student names and results
