@@ -3,9 +3,9 @@ CodeForge is a project focused on practising your skills in different subjects. 
 
 ## Our Team
 - [@KGDaradjanov23](https://github.com/KGDaradjanov) - Scrum Trainer
-- [@TSLuchev23](https://github.com/TSPLuchev) - Frontend Developer
+- [@TSPLuchev23](https://github.com/TSPLuchev) - Frontend Developer
 - [@nhdimitrov23](https://github.com/nhdimitrov23) - Backend Developer
-- [@KRParashkelov23](https://github.com/KRParashkevov23) - Designer
+- [@KRParashkevov23](https://github.com/KRParashkevov23) - Designer
 
 ## Documentation
 - [Presentation]()
