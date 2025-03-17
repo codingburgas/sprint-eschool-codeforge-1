@@ -131,16 +131,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\CodeForgeE-Test.cpp" />
-    <ClCompile Include="src\questions.cpp" />
-    <ClCompile Include="src\raylibRunner.cpp" />
-    <ClCompile Include="src\results.cpp" />
-    <ClCompile Include="src\test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\questions.h" />
-    <ClInclude Include="include\raylibRunner.h" />
-    <ClInclude Include="include\results.h" />
-    <ClInclude Include="include\test.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

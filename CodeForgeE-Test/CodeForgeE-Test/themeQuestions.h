@@ -90,12 +90,12 @@ void startQuiz() {
         cin >> userAnswer;
 
         if (tolower(userAnswer) == questions[i].correctAnswer) {
-            cout << "Correct!\n" << endl;
+            cout << "\033[32m" << "Correct!\n" << "\033[0m" << endl;
             score++;
         }
         else {
-            cout << "Incorrect! The correct answer is " << questions[i].correctAnswer << ") "
-                << questions[i].options[questions[i].correctAnswer - 'a'] << ".\n" << endl;
+            cout << "\033[1;31m" << "Incorrect! The correct answer is " << questions[i].correctAnswer << ") "
+                << questions[i].options[questions[i].correctAnswer - 'a'] << ".\n" << "\033[0m" << endl;
         }
     }
 

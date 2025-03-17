@@ -33,6 +33,3 @@ int Results[100];
 int studCounter = 0;
 
 int catPerform[4];
-
-
-
