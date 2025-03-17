@@ -2,6 +2,7 @@
 #include <string>
 #include <Windows.h>
 #include "test.h"
+#include "choiceSelector.h"
 
 using namespace std;
 
@@ -48,8 +49,10 @@ int main()
         switch (choice) {
         case 1:
             //test doing
-            startTest();
-            Sleep(4000);
+            system("cls");
+            //startTest();
+            choiceSelector();
+            //Sleep(4000);
             break;
         case 2:
             //students with highest score
