@@ -87,10 +87,10 @@ void startQuiz() {
     };
 
     random_device rd;
-    mt19937 g(rd());
-    shuffle(questions.begin(), questions.end(), g);
-    int score = 0;
-
+mt19937 g(rd());
+shuffle(questions.begin(), questions.end(), g);
+currentStudent.score = 0;
+    
     int numQuestions = min(20, (int)questions.size());
     for (int i = 0; i < 20; i++) {
         cout << i + 1 << ". " << questions[i].question << endl;
@@ -113,8 +113,17 @@ void startQuiz() {
         }
     }
 
-    cout << setw(132) << "Quiz Complete! Your final score: " << score << "/20" << endl;
-    Sleep(10000);
+    cout << setw(132) << "Quiz Complete! Your final score: " << currentStudent.score << "/20" << endl;
+students.push_back(currentStudent); // Add the current student to the list
+
+// Find the student with the highest score
+if (!students.empty()) {
+    auto highestScorer = *max_element(students.begin(), students.end(), [](const Student& a, const Student& b) {
+        return a.score < b.score;
+        });
+}
+
+Sleep(4000);
 }
 void studMaxResult2()
 {
