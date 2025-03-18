@@ -85,11 +85,11 @@ void startQuiz() {
 
     int numQuestions = min(20, (int)questions.size());
     for (int i = 0; i < 20; i++) {
-        cout << i + 1 << ". " << questions[i].question << endl;
-        cout << "   a) " << questions[i].options[0] << endl;
-        cout << "   b) " << questions[i].options[1] << endl;
-        cout << "   c) " << questions[i].options[2] << endl;
-        cout << "   d) " << questions[i].options[3] << endl;
+        cout << setw(100) << i + 1 << ". " << questions[i].question << endl;
+        cout << setw(90) << "a) " << questions[i].options[0] << "   |   ";
+        cout << "b) " << questions[i].options[1] << "   |   ";
+        cout << "c) " << questions[i].options[2] << "   |   ";
+        cout << "d) " << questions[i].options[3] << endl;
 
         cout << setw(123) << "Your answer: ";
         char userAnswer;
