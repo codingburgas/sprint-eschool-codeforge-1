@@ -112,34 +112,31 @@ cin >> studNames[studCounter - 1];
     Sleep(10000);
 }
 void studMaxResult2()
-//the function finds the highest score from all the tests taken and
-//displays the names of the students who received this score on the screen
 {
     system("cls");
-    int maxResult = 0;
-    //traversing the array of results to find the highest score
-    for (int i = 0; i < studCounter; i++) {
-        if (Results[i] > maxResult) maxResult = Results[i];
+    if (students.empty()) {
+        cout << "No students have taken the quiz yet." << endl;
+        return;
     }
-    cout << "Students with the highest gread " << maxResult << " points, and the greade is " << pointsToGrade(maxResult) << " ." << endl;
-    //displaying the names of the students with the highest score
-    for (int i = 0; i < studCounter; i++) {
-        if (Results[i] == maxResult) cout << studNames[i] << endl;
+
+    auto highestScorer = *max_element(students.begin(), students.end(), [](const Student& a, const Student& b) {
+        return a.score < b.score;
+        });
+
+    cout << endl << "Student with the highest score: " << highestScorer.name << " (" << highestScorer.score << "/20)" << endl;
     }
-}
 void studMinResult2()
-//the function finds the lowest score from all tests taken and
-//displays the names of the students who received this score on the screen
+
 {
     system("cls");
-    int minResult = 20;
-    //traversing the array of results to find the lowest score
-    for (int i = 0; i < studCounter; i++) {
-        if (Results[i] < minResult) minResult = Results[i];
+    if (students.empty()) {
+        cout << "No students have taken the quiz yet." << endl;
+        return;
     }
-    cout << "Students with the lowest gread " << minResult << " points, and the greade is " << pointsToGrade(minResult) << " ." << endl;
-    //displaying the names of the students with the lowest score
-    for (int i = 0; i < studCounter; i++) {
-        if (Results[i] == minResult) cout << studNames[i] << endl;
-    }
+
+    auto highestScorer = *min_element(students.begin(), students.end(), [](const Student& a, const Student& b) {
+        return a.score < b.score;
+        });
+
+    cout << endl << "Student with the highest score: " << highestScorer.name << " (" << highestScorer.score << "/20)" << endl;
 }
