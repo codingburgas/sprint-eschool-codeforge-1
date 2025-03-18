@@ -9,16 +9,21 @@
 
 using namespace std;
 
-struct Question {
-    string question;
-    string options[4];
-    char correctAnswer;
+struct Student {
+    string name;
+    int score;
 };
 
 void startQuiz() {
-    studCounter += 1; //increase the student counter
-cout << endl << endl << endl << "Enter a name: ";
-cin >> studNames[studCounter - 1];
+    Student currentStudent;
+    cout << endl << endl << endl << "Enter a name: ";
+    cin >> currentStudent.name;
+
+    struct Question {
+        string question;
+        string options[4];
+        char correctAnswer;
+    };
     vector<Question> questions = {
         //Geography questions
         {"What is the longest river in the world?", {"Amazon River", "Mississippi River", "Nile River", "Yangtze River"}, 'c'},
