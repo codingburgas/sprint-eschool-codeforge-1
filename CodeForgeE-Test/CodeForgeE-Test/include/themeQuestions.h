@@ -5,6 +5,7 @@
 #include <vector>
 #include <algorithm>
 #include <random>
+#include "questions.h"
 
 using namespace std;
 
@@ -15,6 +16,9 @@ struct Question {
 };
 
 void startQuiz() {
+    studCounter += 1; //increase the student counter
+cout << endl << endl << endl << "Enter a name: ";
+cin >> studNames[studCounter - 1];
     vector<Question> questions = {
         //Geography questions
         {"What is the longest river in the world?", {"Amazon River", "Mississippi River", "Nile River", "Yangtze River"}, 'c'},
@@ -106,4 +110,36 @@ void startQuiz() {
 
     cout << setw(132) << "Quiz Complete! Your final score: " << score << "/20" << endl;
     Sleep(10000);
+}
+void studMaxResult2()
+//the function finds the highest score from all the tests taken and
+//displays the names of the students who received this score on the screen
+{
+    system("cls");
+    int maxResult = 0;
+    //traversing the array of results to find the highest score
+    for (int i = 0; i < studCounter; i++) {
+        if (Results[i] > maxResult) maxResult = Results[i];
+    }
+    cout << "Students with the highest gread " << maxResult << " points, and the greade is " << pointsToGrade(maxResult) << " ." << endl;
+    //displaying the names of the students with the highest score
+    for (int i = 0; i < studCounter; i++) {
+        if (Results[i] == maxResult) cout << studNames[i] << endl;
+    }
+}
+void studMinResult2()
+//the function finds the lowest score from all tests taken and
+//displays the names of the students who received this score on the screen
+{
+    system("cls");
+    int minResult = 20;
+    //traversing the array of results to find the lowest score
+    for (int i = 0; i < studCounter; i++) {
+        if (Results[i] < minResult) minResult = Results[i];
+    }
+    cout << "Students with the lowest gread " << minResult << " points, and the greade is " << pointsToGrade(minResult) << " ." << endl;
+    //displaying the names of the students with the lowest score
+    for (int i = 0; i < studCounter; i++) {
+        if (Results[i] == minResult) cout << studNames[i] << endl;
+    }
 }
