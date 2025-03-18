@@ -4,7 +4,7 @@
 #include <Windows.h>
 #include "test.h"
 #include "choiceSelector.h"
-#include "../themeQuestions.h"
+#include "themeQuestions.h"
 
 using namespace std;
 
@@ -59,12 +59,12 @@ int main()
             break;
         case 2:
             //students with highest score
-            studMaxResult();
+            studMaxResult2();
             Sleep(4000);
             break;
         case 3:
             //students with lowest score
-            studMinResult();
+            studMinResult2();
             Sleep(4000);
             break;
         case 4:
