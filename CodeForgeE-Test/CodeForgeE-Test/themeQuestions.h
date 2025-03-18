@@ -4,7 +4,7 @@
 #include <Windows.h>
 #include <vector>
 #include <algorithm>
-#include <ctime>
+#include <random>
 
 using namespace std;
 
@@ -77,9 +77,13 @@ void startQuiz() {
         {"Which word means 'a place where people live'?", {"Car", "House", "Tree", "Road"}, 'b'}
     };
 
-    random_shuffle(questions.begin(), questions.end());
+    random_device rd;
+    mt19937 g(rd());  // Mersenne Twister random generator
+    shuffle(questions.begin(), questions.end(), g);
+
     int score = 0;
 
+    int numQuestions = min(20, (int)questions.size());
     for (int i = 0; i < 20; i++) {
         cout << i + 1 << ". " << questions[i].question << endl;
         cout << "   a) " << questions[i].options[0] << endl;
