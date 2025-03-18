@@ -14,6 +14,8 @@ struct Student {
     int score;
 };
 
+vector<Student> students; // Stores all students and their scores
+
 void startQuiz() {
     Student currentStudent;
     cout << endl << endl << endl << "Enter a name: ";
@@ -24,8 +26,9 @@ void startQuiz() {
         string options[4];
         char correctAnswer;
     };
+
     vector<Question> questions = {
-        //Geography questions
+        // Geography questions
         {"What is the longest river in the world?", {"Amazon River", "Mississippi River", "Nile River", "Yangtze River"}, 'c'},
         {"Which country has the largest population?", {"India", "United States", "China", "Brazil"}, 'a'},
         {"What is the capital of Canada?", {"Toronto", "Vancouver", "Ottawa", "Montreal"}, 'c'},
@@ -37,7 +40,7 @@ void startQuiz() {
         {"What is the capital of Japan?", {"Beijing", "Seoul", "Tokyo", "Bangkok"}, 'c'},
         {"The Amazon Rainforest is primarily located in which country?", {"Brazil", "Argentina", "Colombia", "Venezuela"}, 'a'},
 
-        //Chemistry questions
+        // Chemistry questions
         {"What is the chemical symbol for gold?", {"Au", "Ag", "Pb", "Fe"}, 'a'},
         {"What is the most abundant gas in Earth’s atmosphere?", {"Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"}, 'c'},
         {"Which element is necessary for respiration?", {"Helium", "Oxygen", "Nitrogen", "Argon"}, 'b'},
@@ -49,7 +52,7 @@ void startQuiz() {
         {"What is the chemical formula for table salt?", {"NaCl", "KCl", "HCl", "CaCl2"}, 'a'},
         {"What type of bond is formed when electrons are shared?", {"Ionic", "Covalent", "Metallic", "Hydrogen"}, 'b'},
 
-        //History questiosn
+        // History questions
         {"Who was the first President of the United States?", {"Thomas Jefferson", "George Washington", "Abraham Lincoln", "John Adams"}, 'b'},
         {"In what year did World War II end?", {"1943", "1944", "1945", "1946"}, 'c'},
         {"The Renaissance was a cultural movement that began in which country?", {"France", "England", "Italy", "Spain"}, 'c'},
@@ -61,7 +64,7 @@ void startQuiz() {
         {"What was the capital of the Roman Empire?", {"Athens", "Rome", "Constantinople", "Alexandria"}, 'b'},
         {"The Cold War was primarily between which two countries?", {"China and Japan", "France and Germany", "USA and USSR", "UK and Spain"}, 'c'},
 
-        //Math questions
+        // Math questions
         {"What is 8 * 7?", {"48", "56", "64", "72"}, 'b'},
         {"What is the square root of 81?", {"7", "8", "9", "10"}, 'c'},
         {"What is 15% of 200?", {"20", "25", "30", "35"}, 'c'},
@@ -71,9 +74,9 @@ void startQuiz() {
         {"Solve: 2x + 5 = 15", {"3", "5", "7", "10"}, 'b'},
         {"What is pi approximately equal to?", {"2.14", "3.14", "4.14", "5.14"}, 'b'},
         {"How many degrees are in a right angle?", {"45°", "90°", "180°", "270°"}, 'b'},
-        {"What is 2^5?", {"10", "25", "32", "50"}, 'c'},
+        {"What is 2^5?", {"10", "25", "32", "50"}, 'b'},
 
-        //English questions
+        // English questions
         {"What is a synonym for 'happy'?", {"Sad", "Joyful", "Angry", "Tired"}, 'b'},
         {"Which word is a noun?", {"Run", "Quickly", "House", "Beautiful"}, 'c'},
         {"Which word is the past tense of 'go'?", {"Goes", "Going", "Went", "Go"}, 'c'},
@@ -87,12 +90,12 @@ void startQuiz() {
     };
 
     random_device rd;
-mt19937 g(rd());
-shuffle(questions.begin(), questions.end(), g);
-currentStudent.score = 0;
-    
+    mt19937 g(rd());
+    shuffle(questions.begin(), questions.end(), g);
+    currentStudent.score = 0;
+
     int numQuestions = min(20, (int)questions.size());
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < numQuestions; i++) {
         cout << i + 1 << ". " << questions[i].question << endl;
         cout << "   a) " << questions[i].options[0] << endl;
         cout << "   b) " << questions[i].options[1] << endl;
@@ -105,7 +108,7 @@ currentStudent.score = 0;
 
         if (tolower(userAnswer) == questions[i].correctAnswer) {
             cout << setw(118) << "\033[32m" << "Correct!\n" << "\033[0m" << endl;
-            score++;
+            currentStudent.score++;
         }
         else {
             cout << setw(102) << "\033[1;31m" << "Incorrect! The correct answer is " << questions[i].correctAnswer << ") "
@@ -114,16 +117,16 @@ currentStudent.score = 0;
     }
 
     cout << setw(132) << "Quiz Complete! Your final score: " << currentStudent.score << "/20" << endl;
-students.push_back(currentStudent); // Add the current student to the list
+    students.push_back(currentStudent); // Add the current student to the list
 
-// Find the student with the highest score
-if (!students.empty()) {
-    auto highestScorer = *max_element(students.begin(), students.end(), [](const Student& a, const Student& b) {
-        return a.score < b.score;
-        });
-}
+    // Find the student with the highest score
+    if (!students.empty()) {
+        auto highestScorer = *max_element(students.begin(), students.end(), [](const Student& a, const Student& b) {
+            return a.score < b.score;
+            });
+    }
 
-Sleep(4000);
+    Sleep(4000);
 }
 void studMaxResult2()
 {
@@ -138,7 +141,7 @@ void studMaxResult2()
         });
 
     cout << endl << "Student with the highest score: " << highestScorer.name << " (" << highestScorer.score << "/20)" << endl;
-    }
+}
 void studMinResult2()
 
 {
