@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <iomanip>
 #include <Windows.h>
 #include "test.h"
 #include "choiceSelector.h"
@@ -10,16 +11,16 @@ using namespace std;
 void printMenu()
 {
     system("cls");
-    cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
-    cout << "                                                                                                        Choose one of the following options:" << endl;
-    cout << "                                                                                                        1. Take a test" << endl;
-    cout << "                                                                                                        2. Students with the highest score" << endl;
-    cout << "                                                                                                        3. Students with the lowest score" << endl;
-    cout << "                                                                                                        4. Average test score" << endl;
-    cout << "                                                                                                        5. Category with the highest performance" << endl;
-    cout << "                                                                                                        6. Category with the lowest performance" << endl;
-    cout << "                                                                                                        7. Exit" << endl << endl;
-    cout << "                                                                                                        Your choice (1-7):";
+    cout << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
+    cout << setw(139) << "Choose one of the following options:" << '\n';
+    cout << setw(128) << "1. Take a test" << '\n';
+    cout << setw(138) << "2. Students with the highest score" << '\n';
+    cout << setw(137) << "3. Students with the lowest score" << '\n';
+    cout << setw(132) << "4. Average test score" << '\n';
+    cout << setw(141) << "5. Category with the highest performance" << '\n';
+    cout << setw(140) << "6. Category with the lowest performance" << '\n';
+    cout << setw(125) << "7. Exit" << "\n\n";
+    cout << setw(131) << "Your choice (1-7):";
 }
 void initStudents()
 //initialization of the arrays with student names and results
