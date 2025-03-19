@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <string>
 #include <iomanip>
 #include <Windows.h>
@@ -11,7 +11,7 @@ using namespace std;
 
 struct Student {
     string name;
-    int score;
+    int score= 0;
 };
 
 vector<Student> students; // Stores all students and their scores
@@ -125,7 +125,6 @@ void startQuiz() {
             return a.score < b.score;
             });
     }
-
     Sleep(4000);
 }
 void studMaxResult2()
@@ -157,3 +156,4 @@ void studMinResult2()
 
     cout << endl << "Student with the highest score: " << highestScorer.name << " (" << highestScorer.score << "/20)" << endl;
 }
+
