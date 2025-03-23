@@ -20,7 +20,7 @@ void printMenu()
     cout << setw(141) << "5. Category with the highest performance" << '\n';
     cout << setw(140) << "6. Category with the lowest performance" << '\n';
     cout << setw(125) << "7. Exit" << "\n\n";
-    cout << setw(131) << "Your choice (1-7):";
+    cout << setw(130) << "Your choice (1-7): ";
 }
 void initStudents()
 //initialization of the arrays with student names and results

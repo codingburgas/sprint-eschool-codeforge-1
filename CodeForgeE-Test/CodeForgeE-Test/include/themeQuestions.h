@@ -16,9 +16,29 @@ struct Student {
 
 vector<Student> students; // Stores all students and their scores
 
+int centerQuestion(string fullQuestion)
+{
+    int spaces = (237 - fullQuestion.length()) / 2;
+    if ((237 - fullQuestion.length()) % 2 != 0)
+    {
+        spaces += 1;
+    }
+    return spaces;
+}
+
+int centerOptions(string allOptions)
+{
+    int spaces = (237 - allOptions.length()) / 2;
+    if ((237 - allOptions.length()) % 2 != 0)
+    {
+        spaces += 1;
+    }
+    return spaces;
+}
+
 void startQuiz() {
     Student currentStudent;
-    cout << endl << endl << endl << "Enter a name: ";
+    cout << endl << endl << endl << setw(124) << "Enter a name: ";
     cin >> currentStudent.name;
 
     struct Question {
@@ -26,6 +46,8 @@ void startQuiz() {
         string options[4];
         char correctAnswer;
     };
+
+    string fullQuestion, allOptions;
 
     vector<Question> questions = {
         // Geography questions
@@ -96,22 +118,21 @@ void startQuiz() {
 
     int numQuestions = min(20, (int)questions.size());
     for (int i = 0; i < numQuestions; i++) {
-        cout << i + 1 << ". " << questions[i].question << endl;
-        cout << "   a) " << questions[i].options[0] << endl;
-        cout << "   b) " << questions[i].options[1] << endl;
-        cout << "   c) " << questions[i].options[2] << endl;
-        cout << "   d) " << questions[i].options[3] << endl;
+        fullQuestion = to_string(i + 1) + ". " + questions[i].question;
+        cout << setw(centerQuestion(fullQuestion)) << "" << fullQuestion << "\n\n";
+        allOptions = "a) " + questions[i].options[0] + "   |   b) " + questions[i].options[1] + "   |   c) " + questions[i].options[2] + "   |   d) " + questions[i].options[3];
+        cout << setw(centerOptions(allOptions)) << "" << allOptions << "\n\n";
 
-        cout << setw(123) << "Your answer: ";
+        cout << setw(125) << "Your answer: ";
         char userAnswer;
         cin >> userAnswer;
 
         if (tolower(userAnswer) == questions[i].correctAnswer) {
-            cout << setw(118) << "\033[32m" << "Correct!\n" << "\033[0m" << endl;
+            cout << setw(120) << "\033[32m" << "Correct!\n" << "\033[0m" << endl;
             currentStudent.score++;
         }
         else {
-            cout << setw(102) << "\033[1;31m" << "Incorrect! The correct answer is " << questions[i].correctAnswer << ") "
+            cout << setw(109) << "\033[1;31m" << "Incorrect! The correct answer is " << questions[i].correctAnswer << ") "
                 << questions[i].options[questions[i].correctAnswer - 'a'] << ".\n" << "\033[0m" << endl;
         }
     }
