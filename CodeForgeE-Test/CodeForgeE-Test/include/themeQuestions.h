@@ -108,7 +108,19 @@ void startQuiz() {
         {"Which of these is an adverb?", {"Jump", "Slow", "Quickly", "Green"}, 'c'},
         {"Which word means 'to look at books'?", {"Read", "Reed", "Red", "Ride"}, 'a'},
         {"Which of these is a pronoun?", {"Dog", "She", "Table", "Run"}, 'b'},
-        {"Which word means 'a place where people live'?", {"Car", "House", "Tree", "Road"}, 'b'}
+        {"Which word means 'a place where people live'?", {"Car", "House", "Tree", "Road"}, 'b'},
+
+        // JavaScript questions
+        {"What is JavaScript's standard?", {"SIGMAScript", "ECMAScript", "Angular", "W3C"}, 'b'},
+        {"What were JavaScript's first two names?", {"TypeScript and jQuery", "React and Java", "Mocha and LiveScript", "JScript and DOMScript"}, 'c'},
+        {"Who originally designed JavaScript?", {"Brendan Eich", "MrBeast", "Jesse James Garrett", "Ryan Dahl"}, 'a'},
+        {"How do you write an arrow function in JavaScript?", {"function func(arg) <= expr;", "void func(int arg) {return expr;}", "const func = (arg) => expr;", "let sum = 0 => {return a + b;}"}, 'c'},
+        {"Which one is the nullish coalescing operator in JavaScript?", {"??", "?!", "!!", "&&"}, 'a'},
+        {"How can you enable strict mode in JavaScript?", {"'use strict'", "using namespace strict;", "'enable strict'", "#include <use_strict>"}, 'a'},
+        {"How can you convert a value to an integer in JavaScript?", {"N(v)", "Number(value)", "Num(val)", "int(var)"}, 'b'},
+        {"What will be outputted if we run alert(Number(undefined)); in JavaScript?", {"null", "NaN", "Error: 404", "false"}, 'b'},
+        {"How do you output a value inside of a string in JavaScript?", {"prompt('Are you stringing?', {yes});", "alert('str ${value} ing');", "alert(`str ${value} ing`);", "alert(`str {value} ing`);"}, 'c'},
+        {"Which one raises a to the power of b in JavaScript?", {"alert(a ** b);", "return a * b;", "cout << a ^ b;", "System.out.println(a ** b);"}, 'a'}
     };
 
     random_device rd;
