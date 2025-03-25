@@ -1,8 +1,7 @@
-<h1 style="text-align: center;">CodeForge</h1>
-
-<p style="text-align: center;">
+<div align="center">
+  <h1>CodeForge</h1>
   <img src="logos/CodeForgeLogo.png" alt="Team logo" width="200">
-</p>
+</div>
 
 ## About
 **CodeForge** is a project designed to help you practice your skills in different subjects. We have 5 themes, and the questions will be picked from a question bank.
@@ -20,7 +19,7 @@
 
 ## Documentation
 - [Presentation](docs/CodeForgePresentation.pptx)
-- [Documentation](#)
+- [Documentation](docs/CodeForgeDocumentation.docx)
 
 ## Tools Used
 <div>
