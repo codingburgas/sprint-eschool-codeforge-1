@@ -4,7 +4,7 @@
 </div>
 
 ## About
-**CodeForge** is a project designed to help you practice your skills in different subjects. We have 5 themes, and the questions will be picked from a question bank.
+**CodeForge** is a project designed to help you practice your skills in different subjects. We have 6 subjects, and the questions will be picked from a question bank.
 ## Features
 - **User-friendly interface** for practicing skills
 - **Multiple themes in a single test**
